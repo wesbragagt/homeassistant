@@ -2,6 +2,10 @@
 
 set -e
 
+SCRIPT_DIR="$(dirname "$(realpath "$0")")"
+
+cd $SCRIPT_DIR || exit 1
+
 # Add all files to the repository with respect to .gitignore rules
 git add -A
 
