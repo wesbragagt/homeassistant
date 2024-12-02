@@ -1,0 +1,18 @@
+- id: '1732942263036'
+  name: Goodnight
+  entities:
+    switch.office_lights:
+      friendly_name: Office Lights
+      state: 'off'
+    binary_sensor.office_lights_cloud_connection:
+      device_class: connectivity
+      friendly_name: Office Lights Cloud connection
+      state: 'on'
+    switch.office_lights_led:
+      friendly_name: Office Lights LED
+      state: 'on'
+    switch.lights_living_room_window:
+      friendly_name: Lights Living Room Window
+      state: 'off'
+  icon: mdi:shield-moon
+  metadata: {}
