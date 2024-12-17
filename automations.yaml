@@ -1,1 +1,37 @@
-[]
+- id: '1734369560493'
+  alias: Goodnight
+  description: Turns off lights in the house
+  triggers:
+  - trigger: time
+    at: 00:00:00
+  conditions: []
+  actions:
+  - action: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      area_id:
+      - office
+      - living_room
+  mode: single
+- id: '1734369681720'
+  alias: Good Morning Office
+  description: Turns office devices on
+  triggers:
+  - trigger: time
+    at: 09:00:00
+  conditions:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  actions:
+  - action: switch.turn_on
+    metadata: {}
+    data: {}
+    target:
+      area_id: office
+  mode: single
