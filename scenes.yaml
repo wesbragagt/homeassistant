@@ -49,3 +49,30 @@
       state: 'on'
   icon: mdi:laptop
   metadata: {}
+- id: '1734838686539'
+  name: Goodnight Boys
+  entities:
+    media_player.bed_time:
+      is_volume_muted: false
+      media_content_type: music
+      media_duration: 159
+      media_position: 109
+      media_position_updated_at: '2024-12-22T03:38:28.691591+00:00'
+      media_title: Something Thoughtful
+      media_artist: Steve Harris
+      media_album_name: Sweater Weather Instrumentals
+      shuffle: false
+      entity_picture_local: /api/media_player_proxy/media_player.bed_time?token=fc26c6aa3e1523cde17aac12c3aef5653a2764dc7c168381e9d91c99428bece0&cache=0fe0a6a3d38ac82c
+      available: true
+      last_called:
+      last_called_timestamp:
+      last_called_summary:
+      connected_bluetooth:
+      bluetooth_list: []
+      previous_volume:
+      entity_picture: https://i.scdn.co/image/ab67616d0000b2733b8b7b422df2311915cc70e6
+      friendly_name: Bed Time
+      supported_features: 56253
+      state: playing
+  icon: mdi:shield-moon
+  metadata: {}
