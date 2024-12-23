@@ -1,0 +1,29 @@
+boys_play_sweather_weather_instrumentals:
+  alias: Boys Play Sweather Weather Instrumentals
+  description: Plays the sleep playlist for boys room
+  icon: mdi:sleep
+  sequence:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.will_s_room
+    data:
+      media_content_id: Sweater Weather Instrumentals
+      media_content_type: SPOTIFY
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.ben_s_room
+    data:
+      media_content_id: Sweater Weather Instrumentals
+      media_content_type: SPOTIFY
+stop_music_in_boys_rooms:
+  alias: Stop Music in Boys Rooms
+  sequence:
+  - action: media_player.media_stop
+    metadata: {}
+    data: {}
+    target:
+      area_id:
+      - will_s_room
+      - ben_s_room
+  description: Stops playing music in the boys room
+  icon: mdi:pause
