@@ -3,7 +3,7 @@
   description: Turns off lights in the house
   triggers:
   - trigger: time
-    at: 00:00:00
+    at: 01:00:00
   conditions: []
   actions:
   - action: switch.turn_off
@@ -13,6 +13,11 @@
       area_id:
       - office
       - living_room
+  - action: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      area_id: bedroom
   mode: single
 - id: '1734369681720'
   alias: Good Morning Office
@@ -61,4 +66,93 @@
   - action: script.stop_music_in_boys_rooms
     metadata: {}
     data: {}
+  mode: single
+- id: '1736224417368'
+  alias: Bedroom Night Vibes Lights Fade
+  description: Lights will turn on and start fading on a delay interval.
+  triggers:
+  - trigger: time
+    at: '16:50:00'
+  conditions: []
+  actions:
+  - action: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.bedroom_night_vibes
+  - delay:
+      hours: 2
+      minutes: 0
+      seconds: 10
+      milliseconds: 0
+  - action: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.bedroom_night_vibes_75
+  - delay:
+      hours: 1
+      minutes: 0
+      seconds: 10
+      milliseconds: 0
+  - action: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.bedroom_night_vibes_50
+  - delay:
+      hours: 1
+      minutes: 0
+      seconds: 10
+      milliseconds: 0
+  - action: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.bedroom_night_vibes_35
+  - delay:
+      hours: 1
+      minutes: 0
+      seconds: 10
+      milliseconds: 0
+  - action: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.bedroom_night_vibes_25
+  - delay:
+      hours: 1
+      minutes: 0
+      seconds: 10
+      milliseconds: 0
+  - action: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.bedroom_night_vibes_10
+  - delay:
+      hours: 1
+      minutes: 0
+      seconds: 10
+      milliseconds: 0
+  - action: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.bedroom_night_vibes_5
+  - delay:
+      hours: 1
+      minutes: 0
+      seconds: 10
+      milliseconds: 0
+  - action: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.bedroom_night_vibes_off
+  mode: single
+- id: '1736227000202'
+  alias: Bedroom Start Cozy Vibes
+  description: ''
+  triggers:
+  - trigger: time
+    at: '21:00:00'
+  conditions: []
+  actions:
+  - action: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.bedroom_cozy_vibes
   mode: single
