@@ -935,3 +935,83 @@
       state: 'on'
   icon: mdi:power-sleep
   metadata: {}
+- id: '1736297876713'
+  name: Bedroom Dinner Vibes 100
+  entities:
+    light.bedroom_desk_lamp:
+      min_color_temp_kelvin: 2500
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 293
+      - 61
+      rgb_color:
+      - 236
+      - 99
+      - 255
+      xy_color:
+      - 0.351
+      - 0.176
+      friendly_name: Bedroom Desk Lamp
+      supported_features: 32
+      state: 'on'
+    light.bedroom_mackenzie_light:
+      min_color_temp_kelvin: 2500
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 302
+      - 44
+      rgb_color:
+      - 255
+      - 142
+      - 251
+      xy_color:
+      - 0.368
+      - 0.218
+      friendly_name: Bedroom Mackenzie Light
+      supported_features: 32
+      state: 'on'
+    light.bedroom_wes_light:
+      min_color_temp_kelvin: 2500
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 290
+      - 62
+      rgb_color:
+      - 228
+      - 96
+      - 255
+      xy_color:
+      - 0.342
+      - 0.17
+      friendly_name: Bedroom Wes Light
+      supported_features: 32
+      state: 'on'
+  icon: mdi:moon-waning-crescent
+  metadata: {}

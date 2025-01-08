@@ -27,3 +27,15 @@ stop_music_in_boys_rooms:
       - ben_s_room
   description: Stops playing music in the boys room
   icon: mdi:pause
+cast_youtube_live_stream:
+  alias: bedroom-chill-dinner-vibes
+  sequence:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.bedroom_tv
+    data:
+      media_content_type: cast
+      media_content_id: "{\n  \"app_name\": \"youtube\",\n  \"media_id\": \"sF80I-TQiW0\"\n}\n"
+  - action: scene.turn_on
+    target:
+      entity_id: scene.bedroom_dinner_vibes_100
