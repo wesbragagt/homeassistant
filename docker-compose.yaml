@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    volumes:
+      - /volume1/docker/homeassistant:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /run/dbus:/run/dbus:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+    devices:
+      - "/dev/ttyACM0:/dev/ttyACM0:rwm"
+  zjs:
+    container_name: zjs
+    image: ghcr.io/kpine/zwave-js-server:latest
+    restart: unless-stopped
+    environment:
+      - "S2_ACCESS_CONTROL_KEY=7764841BC794A54442E324682A550CEF"
+      - "S2_AUTHENTICATED_KEY=66EA86F088FFD6D7497E0B32BC0C8B99"
+      - "S2_UNAUTHENTICATED_KEY=2FAB1A27E19AE9C7CC6D18ACEB90C357"
+      - "S0_LEGACY_KEY=17DFB0C1BED4CABFF54E4B5375E257B3"
+      - "LR_S2_ACCESS_CONTROL_KEY=61BEF779F9DF0827CD9870B719D074BB"
+      - "LR_S2_AUTHENTICATED_KEY=905B869063266296AE5159EEDBEE038D"
+      - "RF_REGION=USA (Long Range)"
+    devices:
+      - "/dev/ttyACM0:/dev/zwave:rwm"
+    volumes:
+      - /volume1/docker/homeassistant/cache:/cache
+    ports:
+      - "3000:3000"
