@@ -156,3 +156,34 @@
     target:
       entity_id: scene.bedroom_cozy_vibes
   mode: single
+- id: '1737177093624'
+  alias: midnight-turn-off-living-room-office
+  description: ''
+  triggers:
+  - trigger: time
+    at: 00:00:00
+  conditions: []
+  actions:
+  - action: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      area_id:
+      - office
+      - living_room
+  mode: single
+- id: '1737177391771'
+  alias: on-sunrise-cozy-vibes
+  description: ''
+  triggers:
+  - trigger: sun
+    event: sunrise
+    offset: '600'
+  conditions: []
+  actions:
+  - action: scene.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: scene.bedroom_night_vibes_just_bed_10
+  mode: single

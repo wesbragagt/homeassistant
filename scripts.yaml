@@ -53,17 +53,6 @@ bedroom_late_dinner_vibes_jazz:
       media_content_id: "{\n  \"app_name\": \"youtube\",\n  \"media_id\": \"b_Xj3Er_9h5Ef4mC\"\n}
         \ \n"
   alias: bedroom-late-dinner-snowfall-jazz-cafe
-bedroom_chill_winter_vibes:
-  alias: bedroom-chill-winter-vibes
-  sequence:
-  - action: media_extractor.play_media
-    target:
-      device_id: 2bce46d620bed2a8e2a9346f05be414c
-    data:
-      media_content_type: VIDEO
-      media_content_id: https://www.youtube.com/live/SfYqbEY-CS0?si=Stt4fLPww8h0eRVt
-  - action: scene.bedroom_winter_vibes
-  description: ''
 bedroom_turn_winter_vibes:
   alias: bedroom-turn-winter-vibes
   sequence:
