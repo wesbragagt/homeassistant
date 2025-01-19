@@ -171,6 +171,7 @@
       area_id:
       - office
       - living_room
+      - bedroom
   mode: single
 - id: '1737177391771'
   alias: on-sunrise-cozy-vibes
@@ -186,4 +187,13 @@
     data: {}
     target:
       entity_id: scene.bedroom_night_vibes_just_bed_10
+  - delay:
+      hours: 1
+      minutes: 30
+      seconds: 0
+  - action: scene.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: scene.bedroom_night_vibes_35
   mode: single
