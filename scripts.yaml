@@ -66,3 +66,26 @@ bedroom_turn_winter_vibes:
     target:
       entity_id: scene.bedroom_winter_vibes
     data: {}
+bedroom_fire_place_vibes:
+  sequence:
+  - action: scene.turn_on
+    target:
+      entity_id: scene.bedroom_fireplace
+    data: {}
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.bedroom_tv
+    data:
+      media_content_type: cast
+      media_content_id: "{\n  \"app_name\": \"youtube\",\n  \"media_id\": \"uZo7-bqoELk\"\n}\n"
+  alias: bedroom-fire-place-vibes
+dim_bedroom_lights_off:
+  sequence:
+  - action: light.turn_off
+    metadata: {}
+    data:
+      transition: 120
+    target:
+      area_id: bedroom
+  alias: dim-bedroom-lights-off
+  description: ''

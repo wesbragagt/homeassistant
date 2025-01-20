@@ -171,7 +171,6 @@
       area_id:
       - office
       - living_room
-      - bedroom
   mode: single
 - id: '1737177391771'
   alias: on-sunrise-cozy-vibes
@@ -196,4 +195,78 @@
     data: {}
     target:
       entity_id: scene.bedroom_night_vibes_35
+  mode: single
+- id: '1737347379376'
+  alias: YT Mute Ads GC w GTV
+  description: Using media player attributes, you can automate the muting of intrusive
+    advertisements
+  triggers:
+  - entity_id: media_player.bedroom_tv
+    attribute: media_duration
+    below: 153
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 0
+    above: 1
+    id: Duration
+    enabled: true
+    trigger: numeric_state
+  - entity_id: media_player.bedroom_tv
+    attribute: supported_features
+    above: 152448
+    below: 152450
+    id: Features
+    trigger: numeric_state
+  conditions:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: media_player.bedroom_tv
+      attribute: media_title
+      state: ''
+    enabled: true
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: media_player.bedroom_tv
+      attribute: app_name
+      state: YouTube
+  actions:
+  - data: {}
+    action: script.amplifier_volume_mute
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: Duration
+      sequence:
+      - wait_for_trigger:
+        - entity_id: media_player.bedroom_tv
+          attribute: media_duration
+          above: 153
+          trigger: numeric_state
+    - conditions:
+      - condition: trigger
+        id: Features
+      sequence:
+      - wait_for_trigger:
+        - entity_id: media_player.bedroom_tv
+          attribute: supported_features
+          above: 152450
+          below: 152452
+          trigger: numeric_state
+  - data: {}
+    action: script.amplifier_volume_mute
+  mode: single
+- id: '1737348581904'
+  alias: at-midnight-dim-bedroom-lights
+  description: ''
+  triggers:
+  - trigger: time
+    at: 00:00:00
+  conditions: []
+  actions:
+  - action: script.dim_bedroom_lights_off
+    metadata: {}
+    data: {}
   mode: single
