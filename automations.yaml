@@ -270,3 +270,16 @@
     metadata: {}
     data: {}
   mode: single
+- id: '1737518627053'
+  alias: At 11pm Turn Off Living Room TV
+  description: ''
+  triggers:
+  - trigger: time
+    at: '11:00:00'
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: d73bf5e331e13c99b67e295ac445d66d
+    entity_id: f846fb3f3ce854e2025532b8871a18cf
+    domain: remote
+  mode: single
