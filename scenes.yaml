@@ -1175,3 +1175,70 @@
       state: 'on'
   icon: mdi:fire
   metadata: {}
+- id: '1738038184479'
+  name: Ben Sleep
+  entities:
+    light.kitchen_counter_lamp:
+      min_color_temp_kelvin: 2500
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 38
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 275
+      - 67
+      rgb_color:
+      - 184
+      - 84
+      - 255
+      xy_color:
+      - 0.286
+      - 0.14
+      friendly_name: Ben Room Lamp
+      supported_features: 32
+      state: 'on'
+    binary_sensor.kitchen_counter_lamp_cloud_connection:
+      device_class: connectivity
+      friendly_name: Ben Room Lamp Cloud connection
+      state: 'on'
+    sensor.kitchen_counter_lamp_current_consumption:
+      state_class: measurement
+      unit_of_measurement: W
+      device_class: power
+      friendly_name: Ben Room Lamp Current consumption
+      state: '2.3'
+    select.kitchen_counter_lamp_light_preset:
+      options:
+      - Not set
+      - Light preset 1
+      - Light preset 2
+      - Light preset 3
+      - Light preset 4
+      friendly_name: Ben Room Lamp Light preset
+      state: Not set
+    sensor.kitchen_counter_lamp_this_month_s_consumption:
+      state_class: total_increasing
+      unit_of_measurement: kWh
+      device_class: energy
+      friendly_name: Ben Room Lamp This month's consumption
+      state: '1.758'
+    sensor.kitchen_counter_lamp_today_s_consumption:
+      state_class: total_increasing
+      unit_of_measurement: kWh
+      device_class: energy
+      friendly_name: Ben Room Lamp Today's consumption
+      state: '0.131'
+    sensor.kitchen_counter_lamp_total_consumption:
+      state_class: total_increasing
+      unit_of_measurement: kWh
+      device_class: energy
+      friendly_name: Ben Room Lamp Total consumption
+      state: '0.0'
+  icon: mdi:bell-sleep
+  metadata: {}

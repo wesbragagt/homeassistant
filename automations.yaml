@@ -283,3 +283,33 @@
     entity_id: f846fb3f3ce854e2025532b8871a18cf
     domain: remote
   mode: single
+- id: '1738039103631'
+  alias: every-night-bens-light
+  description: ''
+  triggers:
+  - trigger: time
+    at: '20:30:00'
+  conditions: []
+  actions:
+  - action: scene.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: scene.ben_sleep
+  mode: single
+- id: '1738039523999'
+  alias: sunrise-turn-off-ben-light
+  description: ''
+  triggers:
+  - trigger: sun
+    event: sunrise
+    offset: 0
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data:
+      transition: 60
+    target:
+      entity_id: light.kitchen_counter_lamp
+  mode: single
