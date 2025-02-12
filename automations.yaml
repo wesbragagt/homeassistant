@@ -40,20 +40,6 @@
     target:
       area_id: office
   mode: single
-- id: '1734918104328'
-  alias: At 830pm Play Boys Music
-  description: Bed Time Music for boys
-  triggers:
-  - trigger: time
-    at: '20:30:00'
-  conditions: []
-  actions:
-  - action: script.turn_on
-    metadata: {}
-    data: {}
-    target:
-      entity_id: script.boys_play_sweather_weather_instrumentals
-  mode: single
 - id: '1734919387734'
   alias: Sunrise stop night time music
   description: Stops playing night time music on sun rise.
@@ -233,8 +219,6 @@
       attribute: app_name
       state: YouTube
   actions:
-  - data: {}
-    action: script.amplifier_volume_mute
   - choose:
     - conditions:
       - condition: trigger
@@ -255,8 +239,6 @@
           above: 152450
           below: 152452
           trigger: numeric_state
-  - data: {}
-    action: script.amplifier_volume_mute
   mode: single
 - id: '1737348581904'
   alias: at-midnight-dim-bedroom-lights
