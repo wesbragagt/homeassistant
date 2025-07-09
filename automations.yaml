@@ -295,3 +295,25 @@
     target:
       entity_id: light.kitchen_counter_lamp
   mode: single
+- id: '1752035547659'
+  alias: At sunset turn on wills light
+  description: ''
+  triggers:
+  - trigger: sun
+    event: sunset
+    offset: 0
+  conditions:
+  - condition: device
+    type: is_off
+    device_id: a51048f5f35e98e54a7c63ec1f4bc566
+    entity_id: dcf67b0b83179b32a307b412d14107a8
+    domain: light
+    metadata:
+      secondary: false
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      device_id: 5e2502f0efe85e36459ed3b796d92906
+  mode: single
