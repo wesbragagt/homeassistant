@@ -1242,3 +1242,105 @@
       state: '0.0'
   icon: mdi:bell-sleep
   metadata: {}
+- id: '1760495599355'
+  name: Living Room Off Scene
+  entities:
+    switch.lights_living_room_window:
+      friendly_name: Living Room Window Plug
+      state: 'on'
+    light.left_living_room:
+      min_color_temp_kelvin: 2500
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Left Living Room
+      supported_features: 32
+      state: 'off'
+    light.right_living_room:
+      min_color_temp_kelvin: 2500
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Right Living Room
+      supported_features: 32
+      state: 'off'
+  icon: mdi:google-classroom
+  metadata: {}
+- id: '1760495879295'
+  name: Living Room On Scene
+  entities:
+    switch.lights_living_room_window:
+      friendly_name: Living Room Window Plug
+      state: 'on'
+    light.left_living_room:
+      min_color_temp_kelvin: 2500
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2500
+      color_temp: 400
+      hs_color:
+      - 28.874
+      - 72.522
+      rgb_color:
+      - 255
+      - 159
+      - 70
+      xy_color:
+      - 0.546
+      - 0.389
+      friendly_name: Left Living Room
+      supported_features: 32
+      state: 'on'
+    light.right_living_room:
+      min_color_temp_kelvin: 2500
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2500
+      color_temp: 400
+      hs_color:
+      - 28.874
+      - 72.522
+      rgb_color:
+      - 255
+      - 159
+      - 70
+      xy_color:
+      - 0.546
+      - 0.389
+      friendly_name: Right Living Room
+      supported_features: 32
+      state: 'on'
+  icon: mdi:google-classroom
+  metadata: {}
