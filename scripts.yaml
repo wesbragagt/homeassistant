@@ -89,3 +89,12 @@ dim_bedroom_lights_off:
       area_id: bedroom
   alias: dim-bedroom-lights-off
   description: ''
+wake_icebox:
+  alias: Wake Icebox
+  sequence:
+  - device_id: 7f42c108697690fc61322769129b8ab8
+    domain: button
+    entity_id: 6499489d6fb5abaf90ff3cc8b9dc20a7
+    type: press
+  description: Wakes up my desktop
+  icon: mdi:desktop-classic
