@@ -12,22 +12,6 @@
     target:
       entity_id: scene.bedroom_cozy_vibes
   mode: single
-- id: '1737177093624'
-  alias: Midnight Turn Off Living Room
-  description: ''
-  triggers:
-  - trigger: time
-    at: 00:00:00
-  conditions: []
-  actions:
-  - action: switch.turn_off
-    metadata: {}
-    data: {}
-    target:
-      area_id:
-      - office
-      - living_room
-  mode: single
 - id: '1737347379376'
   alias: YT Mute Ads GC w GTV
   description: Using media player attributes, you can automate the muting of intrusive
@@ -244,4 +228,49 @@
         entity_id: light.will_desk_light
       data:
         transition: 300
+  mode: single
+- id: '1785766102'
+  alias: Office Lights Weekday Schedule
+  description: Turn Office lights on at 9 AM and off at 10 PM Monday through Friday.
+  triggers:
+  - trigger: time
+    at: 09:00:00
+    id: on_9am
+  - trigger: time
+    at: '22:00:00'
+    id: off_10pm
+  conditions:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: on_9am
+      sequence:
+      - action: homeassistant.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id:
+          - switch.office_lights
+          - switch.floor_lamp
+          - light.h6076
+    - conditions:
+      - condition: trigger
+        id: off_10pm
+      sequence:
+      - action: homeassistant.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id:
+          - switch.office_lights
+          - switch.floor_lamp
+          - light.h6076
   mode: single
