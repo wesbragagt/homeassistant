@@ -274,3 +274,19 @@
           - switch.floor_lamp
           - light.h6076
   mode: single
+- id: '1786203787'
+  alias: Sunrise Turn Off Bedroom Lights
+  description: Turn off bedroom lights at sunrise.
+  triggers:
+  - trigger: sun
+    event: sunrise
+    offset: 0
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data:
+      transition: 60
+    target:
+      entity_id: light.bedroom_vibes
+  mode: single
